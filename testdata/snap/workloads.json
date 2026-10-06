@@ -1,0 +1,19 @@
+[
+  {
+    "kind": "Deployment",
+    "metadata": {"name": "web", "namespace": "prod", "resourceVersion": "10",
+                 "labels": {"app": "web"}},
+    "spec": {"template": {"spec": {"containers": [
+      {"name": "app", "image": "nginx:1.25",
+       "securityContext": {"privileged": true},
+       "resources": {}}
+    ]}}}
+  },
+  {
+    "kind": "Pod",
+    "metadata": {"name": "debug", "namespace": "prod"},
+    "spec": {"hostNetwork": true, "containers": [
+      {"name": "side", "resources": {"requests": {"cpu": "50m"}}}
+    ]}
+  }
+]

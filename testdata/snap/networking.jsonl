@@ -1,0 +1,3 @@
+{"kind":"Service","metadata":{"name":"edge","namespace":"prod"},"spec":{"type":"NodePort"}}
+{"kind":"Namespace","metadata":{"name":"prod","labels":{"owner":"platform"}}}
+{"kind":"Namespace","metadata":{"name":"legacy"}}
